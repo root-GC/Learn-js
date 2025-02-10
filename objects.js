@@ -95,3 +95,4 @@ alunos.forEach(aluno => {
      console.log(`${aluno.nome} faz o curso de ${aluno.curso}`);
 });
    
+
