@@ -1,0 +1,11 @@
+/*
+O DOM (Document Object Model) representa a estrutura de uma página HTML. 
+Com JavaScript, você pode inserir, modificar e remover elementos HTML, 
+tornando a página dinâmica.
+*/
+
+
+
+
+
+

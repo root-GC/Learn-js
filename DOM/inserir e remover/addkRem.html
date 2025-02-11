@@ -1,0 +1,41 @@
+<!--
+ * 1. Inserir e Remover Elementos Dinamicamente
+ * 
+     Métodos úteis:
+
+     # document.createElement("tag"): Cria um novo elemento HTML.
+     # appendChild(elemento): Adiciona o elemento como filho.
+     # removeChild(elemento): Remove um elemento existente.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipularion</title>
+</head>
+<body>
+    <div id="conteiner"></div>
+    <button onclick="adicionarParagrafo()">adicionar paragrafo</p>
+    <button onclick="removerParagrafo()">remover paragrafo</>
+
+    <script>
+        function adicionarParagrafo(){
+            const div = document.getElementById("conteiner");
+            const button = document.createElement("button");
+            button.textContent="Paragrafo adicionado dinamicamente";
+            div.appendChild(button);
+        }
+        function removerParagrafo(){
+            const div = document.getElementById("conteiner");
+            if(div.lastChild)
+                div.removeChild(div.lastChild);
+        }
+    </script>
+
+</body>
+</html>
+
+
+     
