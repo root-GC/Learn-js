@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Galeria</title>
+
+     <style>
+          body{
+               display: flex;
+          }
+          #mini {
+               display: flex;
+               flex-direction: column; /* Organiza os itens em coluna (um abaixo do outro) */
+               width: 200px;
+               height: 600px;
+               background-color: #FF5733;
+               padding: 10px; /* Adiciona um pequeno espaçamento interno */
+               gap: 10px; /* Espaçamento entre os elementos dentro */
+          }
+
+          #max {
+               width: 1000px;
+               height: 800px;
+               background-color: #2173A9;
+               padding: 10px; /* Adiciona um pequeno espaçamento interno */
+          }
+     </style>
+</head>
+<body>
+     <div id="mini" height="300" width="100"></div>
+     <div id="max" height="600" width="800"></div>
+
+     <script>
+          const mini=document.getElementById("mini");
+          const max = document.getElementById("max");
+
+          const img1 = document.createElement("img");
+          const img2 = document.createElement("img");
+          const img3 = document.createElement("img");
+
+          img1.src="img/boruto.jpg";
+          img1.alt="Boruto";
+          img1.heigh="100";
+          img1.width="200";
+
+          img2.src="img/free.jpg";
+          img2.alt="free";
+          img2.heigh="100";
+          img2.width="200";
+
+          img3.src="img/naruto.jpg";
+          img3.alt="naruto";
+          img3.heigh="100";
+          img3.width="200";
+
+          mini.appendChild(img1);
+          mini.appendChild(img2);
+          mini.appendChild(img3);
+
+          img1.addEventListener('click',function(){
+               changeColor();
+               if(max.lastChild)
+                    max.removeChild(max.lastChild);
+               let clone1 = img1.cloneNode(true); // Clona a imagem
+               clone1.height="800";
+               clone1.width="1000";
+               max.appendChild(clone1);
+
+          });
+          img2.addEventListener('click',function(){
+               changeColor();
+               if(max.lastChild)
+                    max.removeChild(max.lastChild);
+               let clone2 = img2.cloneNode(true);// Clone a imagem
+               clone2.height="800";
+               clone2.width="1000";
+               max.appendChild(clone2);
+          });
+          img3.addEventListener('click',function(){
+               changeColor();
+               if(max.lastChild)
+                    max.removeChild(max.lastChild);
+               let clone3 = img3.cloneNode(true);//Clone a imagem
+               clone3.height="800";
+               clone3.width="1000";
+               max.appendChild(clone3);
+          });
+
+          function changeColor(){
+               max.style.backgroundColor="#2a21a1";
+               max.style.backgroundColor="#192025";
+          }
+          
+     </script>
+</body>
+</html>
